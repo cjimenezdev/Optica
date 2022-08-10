@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-white: rgb(247, 244, 243);
+  --bg-nav: #1266f1;
+  --bg-nav-mobile: rgb(251, 251, 255);
+}
+
+html,
+body {
+  font-family: "Rubik", sans-serif !important;
+  background-color: white !important;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  background-color: #fff;
+}
+::-webkit-scrollbar-button {
+  background-color: rgb(145, 143, 143);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(231, 228, 228);
+  border-radius: 10px;
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  margin: auto;
+}
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff !important;
+  z-index: 4;
+}
+.navbar-nav .nav-item .nav-link {
+  color: #1266f1 !important;
+  cursor: pointer;
+}
+
+.banner {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/build/web/resources/lentes.png");
+}
+
+.select {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 0.5rem 0.4rem;
+  color: #4f4f4f;
+}
+
+.select:focus,
+.select:active {
+  border: 1px solid #1266f1 !important;
+  outline: 1px solid #1266f1 !important;
+}
+
+section {
+  height: 100%;
+}
+.form-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.form-group .form-input {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+}
+
+.form-group .form-lb {
+  position: absolute;
+  top: 15px;
+  left: 0.8rem;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.form-group .form-lbl {
+  position: absolute;
+  top: 7px;
+  left: 0.8rem;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.form-group .form-input:focus,
+.form-group .form-input:hover {
+  border: 1px solid #1266f1;
+  outline: #1266f1;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-lb,
+.form-group .form-input:focus ~ .form-lb,
+.form-group .form-input:active ~ .form-lb {
+  top: -8px;
+  font-size: 11px;
+  background-color: #fff;
+  padding: 0.2rem 0.4rem;
+  transition: all 0.2s ease;
+  color: #1266f1;
+  pointer-events: none;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-lbl,
+.form-group .form-input:focus ~ .form-lbl,
+.form-group .form-input:active ~ .form-lbl {
+  top: -17px;
+  font-size: 11px;
+  background-color: #fff;
+  padding: 0.2rem 0.4rem;
+  transition: all 0.2s ease;
+  color: #1266f1;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 991.8px) {
+  nav.navbar {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    background-color: #1266f1 !important;
+  }
+  nav .navbar-nav {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--bg-nav-mobile);
+    transition: all 0.2s ease;
+    padding: 1.5rem 2rem;
+  }
+  .navbar-nav .nav-item .nav-link {
+    color: var(--bg-nav) !important;
+  }
+  .container {
+    flex-wrap: nowrap !important;
+  }
+}
