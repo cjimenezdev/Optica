@@ -294,7 +294,7 @@ fetch("/build/web/modules/moduloEmpleados/data_Empleados.json")
 export function searchEmpleado() {
   let filtro = document.getElementById("txtBusquedaEmpleado").value;
 
-  let resultados = empleados.filter((element) => element.genero === filtro);
+  let resultados = empleados.filter((element) => element.clave === filtro);
   let cuerpo = "";
   resultados.forEach(function (empleado) {
     let registro =
