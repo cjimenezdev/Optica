@@ -2,7 +2,7 @@ function login() {
   let usuario = document.getElementById("usuario"),
     contrasena = document.getElementById("contraseña");
   if (usuario.value == "admin" && contrasena.value == "admin") {
-    window.location.href = "/build/web/modules/home.html";
+    window.location.href = "/build/web/modules/index.html";
   } else {
     alert("Datos incorrectos");
   }
