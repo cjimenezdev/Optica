@@ -39,7 +39,6 @@ nav.navbar {
   top: 0;
   width: 100%;
   background-color: #fff !important;
-  box-shadow: none !important;
   z-index: 4;
 }
 .navbar-nav .nav-item .nav-link {
