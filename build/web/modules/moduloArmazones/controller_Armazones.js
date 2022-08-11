@@ -59,6 +59,7 @@ export function addArmazon() {
   } else {
     Swal.fire({
       title: "Registrar Armazon",
+      text: nombre,
       icon: "question",
       showConfirmButton: true,
       showCancelButton: true,
